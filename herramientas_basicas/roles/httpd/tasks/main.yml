@@ -1,0 +1,30 @@
+- name: Instalar dependencia HTTPD
+  yum:
+    name: "libselinux-python"
+    state: present
+
+- name: Instalar paquete HTTPD
+  yum:
+    name: "httpd"
+    state: present
+
+- name: configurion httpd.conf
+  copy:
+    src: /var/lib/awx/projects/herramientas_basicas/roles/httpd/files/httpd.conf
+    dest: /etc/httpd/conf/httpd.conf
+  notify: reload httpd
+
+- name: configuración index.html
+  copy:
+    src: /var/lib/awx/projects/herramientas_basicas/roles/httpd/files/index.html
+    dest: /var/www/html/index.html
+  notify: reload httpd
+
+- name: arrancar httpd
+  service:
+    name: httpd
+    state: started
+    enabled: yes
+
+
+

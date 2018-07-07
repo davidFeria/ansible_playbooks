@@ -1,0 +1,6 @@
+- name: software httpd
+  hosts: www
+  become: true
+  roles:
+    - httpd
+

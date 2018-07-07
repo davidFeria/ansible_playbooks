@@ -1,0 +1,8 @@
+- name: software lynx
+  hosts: www
+  become: true
+  tasks:
+    - name: instalar lynx
+      yum:
+        name: "lynx"
+        state: present
