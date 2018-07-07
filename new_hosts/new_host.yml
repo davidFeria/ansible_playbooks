@@ -1,0 +1,6 @@
+- name: preparando configuracion nuevos hosts
+  hosts: new_hosts
+  become: true
+  roles:
+    - crear_usuario
+    - crear_auth 

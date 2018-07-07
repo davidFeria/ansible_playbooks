@@ -1,0 +1,4 @@
+- name: Crear usuario Ansible
+  user:
+    name: ansible
+    create_home: true
