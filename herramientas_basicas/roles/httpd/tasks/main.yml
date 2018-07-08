@@ -10,13 +10,13 @@
 
 - name: configurion httpd.conf
   copy:
-    src: /var/lib/awx/projects/herramientas_basicas/roles/httpd/files/httpd.conf
+    src: /var/lib/awx/projects/files/httpd/httpd.conf
     dest: /etc/httpd/conf/httpd.conf
   notify: reload httpd
 
 - name: configuración index.html
   copy:
-    src: /var/lib/awx/projects/herramientas_basicas/roles/httpd/files/index.html
+    src: /var/lib/awx/projects/files/httpd/index.html
     dest: /var/www/html/index.html
   notify: reload httpd
 
