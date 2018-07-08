@@ -1,4 +1,4 @@
-paquetes_basicos:
+packages:
   - lynx
   - vim
   - net-tools

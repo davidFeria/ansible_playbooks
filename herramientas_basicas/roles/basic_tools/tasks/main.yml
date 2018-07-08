@@ -2,5 +2,5 @@
   yum:
     name: "{{ item }}"
     state: present
-  with_items: "{{ paquetes_basicos }}"
+  with_items: "{{ packages }}"
  
