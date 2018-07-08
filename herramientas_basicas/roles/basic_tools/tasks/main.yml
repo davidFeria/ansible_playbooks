@@ -1,0 +1,6 @@
+- name: Instalando herramientas basicas
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ paquetes_basicos }}"
+ 

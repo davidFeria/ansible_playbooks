@@ -1,0 +1,8 @@
+paquetes_basicos:
+  - lynx
+  - vim
+  - net-tools
+  - telnet
+  - rsync
+  - wget
+  - man

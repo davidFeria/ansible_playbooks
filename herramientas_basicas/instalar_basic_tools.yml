@@ -1,0 +1,7 @@
+- name: Herramientas basica para maquinas linux
+  hosts: www
+  become: true
+  roles:
+    - basic_tools 
+
+
